@@ -1,4 +1,5 @@
 import requests
+import json
 from pprint import pprint
 API_Key = '744c85a34fe812c60c24c9696ef9b5ca'
 city = input("Enter a city:")
