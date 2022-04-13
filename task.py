@@ -18,7 +18,7 @@ def main(URL):
 	webpage = requests.get(URL, headers=HEADERS)
 
 	# Creating the Soup Object containing all data
-	soup = BeautifulSoup(webpage.content, "lxml")
+	soup = BeautifulSoup(webpage.content, 'json')
 
 	# retrieving product title
 	try:
