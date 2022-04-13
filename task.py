@@ -4,7 +4,7 @@ import requests
 
 def main(URL):
 	# opening our output file in append mode
-	File = open("out.csv", "a")
+	File = open("response.json", "a")
 
 	# specifying user agent, You can use other user agents
 	# available on the internet
