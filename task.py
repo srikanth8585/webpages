@@ -75,8 +75,7 @@ def main(URL):
 	# print availablility status
 	try:
 		available = soup.find("div", attrs={'id': 'availability'})
-		available = available.find("span")
-					.string.strip().replace(',', '')
+		available = available.find("span").string.strip().replace(',', '')
 
 	except AttributeError:
 		available = "NA"
