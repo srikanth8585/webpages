@@ -4,7 +4,7 @@ import requests
 
 def main(URL):
 	# opening our output file in append mode
-	File = open("out.json", "a")
+	File = open("out.csv", "a")
 
 	# specifying user agent, You can use other user agents
 	# available on the internet
@@ -18,7 +18,7 @@ def main(URL):
 	webpage = requests.get(URL, headers=HEADERS)
 
 	# Creating the Soup Object containing all data
-	soup = BeautifulSoup(webpage.content, 'json')
+	soup = BeautifulSoup(webpage.content, "lxml")
 
 	# retrieving product title
 	try:
@@ -75,7 +75,8 @@ def main(URL):
 	# print availablility status
 	try:
 		available = soup.find("div", attrs={'id': 'availability'})
-		available = available.find("span").string.strip().replace(',', '')
+		available = available.find("span")
+					.string.strip().replace(',', '')
 
 	except AttributeError:
 		available = "NA"
