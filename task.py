@@ -90,7 +90,7 @@ def main(URL):
 
 if __name__ == '__main__':
 # opening our url file to access URLs
-	file = open("url.txt", "r")
+	file = open("urls.txt", "r")
 
 	# iterating over the urls
 	for links in file.readlines():
